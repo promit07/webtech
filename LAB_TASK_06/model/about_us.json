@@ -1,0 +1,23 @@
+[
+    {
+      "id": "20-42904-1",
+      "name": "PROMIT PAUL",
+      "section": "H",
+      "group":"12",
+      "githubLink": "https://github.com/promit/webtech"
+    },
+    {
+        "id": "20-42925-1",
+      "name": "MD. MOBIN KHAN",
+      "section": "H",
+      "group":"12",
+      "githubLink": "https://github.com/Mobin/Webtech"
+      },
+      {
+        "id": "20-42933-1",
+        "name": "IMTIAZ AHMED",
+        "section": "H",
+        "group":"12",
+        "githubLink": "https://github.com/Imtiaz/Webtech"
+      }     
+  ]

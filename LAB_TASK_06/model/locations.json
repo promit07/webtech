@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Uttara",
+    "id": "1",
+    "type": "Car",
+    "cost": "100",
+    "freeSlot": "12"
+  }
+]
