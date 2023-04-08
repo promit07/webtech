@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Project</title>
+
+</head>
+<body>
+
+<fieldset>
+    <legend><b>BASIC CALCULATOR</b></legend>
+  
+        <table border="3" width="40%" align="center">
+            <tr >
+                <td align="center" style="background-color: rgb(237, 140, 60);"><b> First Number:</b></td>
+                <td align="center" style="background-color: darkcyan;"><input type="number" name="fisrtNumber" id="fisrtNumber" min="0" placeholder="Enter 1st number"></td>
+            </tr>
+            <tr >
+                <td align="center"  style="background-color: rgb(237, 140, 60);"><b> Second Number:</b></td>
+                <td align="center" style="background-color: darkcyan;"><input type="number" name="secondNumber" id="secondNumber" min="0" placeholder="Enter 2nd number"></td>
+            </tr>
+            <tr>
+                <td align="center" style="background-color: rgb(237, 140, 60);"><b>Your Operator: </b></td>
+                <td>
+                    <button style="background-color: rgb(81, 229, 23); width: 65px; height: 30px;" name="submit" id="sum">SUM</button>
+                    <button style="background-color: rgb(209, 236, 32); width: 65px; height: 30px;" name="submit" id="sub">SUB</button>
+                    <button style="background-color: rgb(237, 140, 60); width: 65px; height: 30px;" name="submit" id="mul">MUL</button>
+                    <button style="background-color: rgba(91, 151, 241, 0.943); width: 65px; height: 30px;" name="submit" id="div">DIV</button>
+                </td>
+            </tr>
+            <tr >
+                <td align="center" style="background-color: rgb(237, 140, 60);"><b> Your Output:</b></td>
+                <td align="center" style="background-color: darkcyan;"><input type="text" name="output" id="output" placeholder="Output"></td>
+            </tr>
+            
+        </table><br>
+
+        <b>Date: </b><span id="date"></span><br>
+
+        <b>Time: </b><span id="time"></span>
+   
+    </fieldset>
+
+    <script>
+        var sum = document.getElementById("sum");
+    
+        sum.onclick = function Sum() {
+            var num1 = parseFloat(document.getElementById("fisrtNumber").value);
+            var num2 = parseFloat(document.getElementById("secondNumber").value);
+            var output = document.getElementById("output");
+    
+            if (isNaN(num1) && isNaN(num2)) {
+                alert("Only number is allowed");
+                output.value = "";
+                return;
+            }
+    
+            if (isNaN(num1)) {
+                output.value = num2;
+                return;
+            }
+    
+            if (isNaN(num2)) {
+                output.value = num1;
+                return;
+            }
+    
+            output.value = num1 + num2;
+        };
+
+
+        var sub = document.getElementById("sub");
+    
+        sub.onclick = function Sub() {
+            var num1 = parseFloat(document.getElementById("fisrtNumber").value);
+            var num2 = parseFloat(document.getElementById("secondNumber").value);
+            var output = document.getElementById("output");
+    
+            if (isNaN(num1) && isNaN(num2)) {
+                output.value = "";
+                return;
+            }
+    
+            if (isNaN(num1)) {
+                output.value = num2;
+                return;
+            }
+    
+            if (isNaN(num2)) {
+                output.value = num1;
+                return;
+            }
+    
+            output.value = num1 - num2;
+        };
+
+        var mul = document.getElementById("mul");
+
+        mul.onclick = function Mul() {
+            var num1 = parseFloat(document.getElementById("fisrtNumber").value);
+            var num2 = parseFloat(document.getElementById("secondNumber").value);
+            var output = document.getElementById("output");
+    
+            if (isNaN(num1) && isNaN(num2)) {
+                output.value = "";
+                return;
+            }
+    
+            if (isNaN(num1)) {
+                output.value = num2;
+                return;
+            }
+    
+            if (isNaN(num2)) {
+                output.value = num1;
+                return;
+            }
+    
+            output.value = num1 * num2;
+        };
+
+        var div = document.getElementById("div");
+
+        div.onclick = function Div() {
+            var num1 = parseFloat(document.getElementById("fisrtNumber").value);
+            var num2 = parseFloat(document.getElementById("secondNumber").value);
+            var output = document.getElementById("output");
+    
+            if (isNaN(num1) && isNaN(num2)) {
+                output.value = "";
+                return;
+            }
+    
+            if (isNaN(num1)) {
+                output.value = num2;
+                return;
+            }
+    
+            if (isNaN(num2)) {
+                output.value = num1;
+                return;
+            }
+    
+            output.value = num1 / num2;
+        };
+
+        
+            var date = new Date();
+            document.getElementById("date").innerHTML = date.toLocaleDateString();
+        
+
+        setInterval(myTimer, 1000);
+
+        function myTimer()
+        {
+            var t = new Date();
+            document.getElementById("time").innerHTML = t.toLocaleTimeString();
+        }
+    </script>
+
+</body>
+</html>
+
